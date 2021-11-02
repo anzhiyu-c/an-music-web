@@ -104,4 +104,12 @@ export const HeaderRight = styled.div`
     margin: 0 16px;
     background-color: transparent;
   }
+
+  .ant-input-affix-wrapper:not(.ant-input-affix-wrapper-disabled):hover {
+    border-color: transparent;
+  }
+  .ant-input-affix-wrapper:focus,
+  .ant-input-affix-wrapper-focused {
+    border-color: transparent;
+  }
 `
