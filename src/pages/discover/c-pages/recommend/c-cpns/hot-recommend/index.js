@@ -3,7 +3,7 @@ import { useDispatch, useSelector, shallowEqual } from 'react-redux'
 
 import { HOT_RECOMMEND_LIMIT } from '@/common/contants'
 
-import ANThemeHeader from '../components/theme-header'
+import ANThemeHeader from '../components/theme-header-recommend'
 import ANSongsCover from '@/components/songs-cover'
 import { HotRecommendWrapper } from './style'
 import { getHotRecommendAction } from '../../store/actionCreators'

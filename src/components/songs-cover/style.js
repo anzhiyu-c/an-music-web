@@ -1,17 +1,17 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const SongsCoverWrapper = styled.div`
   width: 140px;
-  margin: 20px ${props => (props.right || 0)} 20px 0;
-
+  margin: 20px ${props => props.right || 0} 20px 0;
   .cover-top {
     position: relative;
+    cursor: pointer;
 
-    &>img {
+    & > img {
       width: 140px;
       height: 140px;
     }
-    
+
     .cover {
       position: absolute;
       top: 0;
@@ -54,6 +54,7 @@ export const SongsCoverWrapper = styled.div`
   .cover-bottom {
     font-size: 14px;
     color: #000;
+    display: inline-block;
     margin-top: 5px;
   }
 

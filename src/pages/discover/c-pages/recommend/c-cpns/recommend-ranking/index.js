@@ -2,7 +2,7 @@ import React, { memo, useEffect } from 'react'
 
 import { getTopListAction } from '../../store/actionCreators'
 
-import ANThemeHeader from '../components/theme-header'
+import ANThemeHeader from '../components/theme-header-recommend'
 import ANTopRanking from '@/components/top-ranking'
 import { RankingWrapper } from './style'
 import { shallowEqual, useDispatch, useSelector } from 'react-redux'

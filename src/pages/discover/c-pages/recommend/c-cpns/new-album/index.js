@@ -7,7 +7,7 @@ import { getNewAlbumAction } from '../../store/actionCreators'
 import { Carousel } from 'antd'
 import { AlbumWrapper } from './style'
 import ANAlbumCover from '@/components/album-cover'
-import ANThemeHeader from '../components/theme-header'
+import ANThemeHeader from '../components/theme-header-recommend'
 
 export default memo(function ANNewAlbum() {
   // redux hooks

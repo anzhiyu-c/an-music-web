@@ -1,6 +1,13 @@
 import * as actionTypes from './constants'
 
-import { getTopBanners, getHotRecommends, getNewAlbums, getTopList } from '@/services/recommend'
+import {
+  getTopBanners,
+  getHotRecommends,
+  getNewAlbums,
+  getTopList,
+  getHotSinger,
+  getHotRadio,
+} from '@/services/recommend'
 
 const changeTopBannerAction = res => ({
   type: actionTypes.CHANGE_TOP_BANNERS,
@@ -30,6 +37,16 @@ const changeNewRankingAction = res => ({
 const changeOriginRankingAction = res => ({
   type: actionTypes.CHANGE_ORIGIN_RANKING,
   originRanking: res.playlist,
+})
+
+const changeHotSingerAction = res => ({
+  type: actionTypes.CHANGE_HOT_SINGER,
+  hotSinger: res.artists,
+})
+
+const changeHotRadioAction = res => ({
+  type: actionTypes.CHANGE_HOT_RADIO,
+  hotRadio: res.djRadios.splice(0, 5),
 })
 
 export const getTopBannerAction = () => {
@@ -76,6 +93,22 @@ export const getTopListAction = id => {
         default:
           break
       }
+    })
+  }
+}
+
+export const getHotSingerAction = limit => {
+  return dispatch => {
+    getHotSinger(limit).then(res => {
+      dispatch(changeHotSingerAction(res))
+    })
+  }
+}
+
+export const getHotRadioAction = limit => {
+  return dispatch => {
+    getHotRadio(limit).then(res => {
+      dispatch(changeHotRadioAction(res))
     })
   }
 }

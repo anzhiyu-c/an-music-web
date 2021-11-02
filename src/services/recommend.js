@@ -32,3 +32,18 @@ export function getTopList(id) {
     },
   })
 }
+
+export function getHotSinger(limit) {
+  return request({
+    url: '/top/artists',
+    params: {
+      limit,
+    },
+  })
+}
+
+export function getHotRadio() {
+  return request({
+    url: '/dj/recommend',
+  })
+}
