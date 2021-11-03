@@ -8,6 +8,7 @@ import store from './store'
 
 import ANAppHeader from '@/components/app-header'
 import ANAppFooter from '@/components/app-footer'
+import ANAppPlayerBar from '@/pages/player/app-player-bar'
 
 export default memo(function App() {
   return (
@@ -16,6 +17,7 @@ export default memo(function App() {
         <ANAppHeader />
         {renderRoutes(routes)}
         <ANAppFooter />
+        <ANAppPlayerBar />
       </HashRouter>
     </Provider>
   )
