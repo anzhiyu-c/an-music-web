@@ -8,7 +8,7 @@ const defaultState = Map({
   topTotal: 0,
 })
 
-function reducer(state = defaultState, action) {
+export default function reducer(state = defaultState, action) {
   switch (action.type) {
     case actionTypes.CHANGE_HOT_ALBUMS:
       return state.set('hotAlbums', action.hotAlbums)
@@ -20,4 +20,3 @@ function reducer(state = defaultState, action) {
       return state
   }
 }
-export default reducer
