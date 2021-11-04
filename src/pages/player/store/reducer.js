@@ -13,7 +13,7 @@ const defaultState = Map({
    */
   sequence: 0,
   lyricList: [],
-  currentLyricIndex: 0,
+  currentLyricIndex: -1,
 })
 
 function reducer(state = defaultState, action) {

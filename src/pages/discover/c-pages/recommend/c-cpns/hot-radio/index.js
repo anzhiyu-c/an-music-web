@@ -25,7 +25,7 @@ export default memo(function ANHotRadio() {
 
       {hotRadio.map(item => {
         return (
-          <a href='/todo' className='radio-item' key={item.id}>
+          <a href='/#' className='radio-item' key={item.id}>
             <img className='head-img' src={item.picUrl + '?param=40x40'} alt='' />
             <div className='info'>
               <h4 className='name text-nowrap'>{item.name}</h4>

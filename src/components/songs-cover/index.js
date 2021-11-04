@@ -22,7 +22,7 @@ export default memo(function ANSongsCover(props) {
           </div>
         </div>
       </div>
-      <a href='/todo' className='cover-bottom'>
+      <a href='/#' className='cover-bottom'>
         {info.name}
       </a>
       {type === SOURCE_CARD ? (

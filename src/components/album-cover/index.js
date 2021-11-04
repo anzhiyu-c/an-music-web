@@ -11,7 +11,7 @@ export default memo(function ANAlbumCover(props) {
     <AlbumWrapper size={size} width={width} bgp={bgp}>
       <div className='album-image'>
         <img src={getSizeImage(info.picUrl, size)} alt='' />
-        <a href='/todo' className='cover image_cover'>
+        <a href='/#' className='cover image_cover'>
           {info.name}
         </a>
       </div>

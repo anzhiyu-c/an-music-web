@@ -47,3 +47,13 @@ export function getHotRadio() {
     url: '/dj/recommend',
   })
 }
+
+export function getArtistList(limit, cat) {
+  return request({
+    url: '/artist/list',
+    params: {
+      cat,
+      limit,
+    },
+  })
+}

@@ -9,14 +9,14 @@ const changeCurrentSongAction = song => ({
   currentSong: song,
 })
 
-const changePlayListAction = playList => ({
-  type: actionTypes.CHANGE_PLAY_LIST,
-  playList,
-})
-
 const changeLyricListAction = lyricList => ({
   type: actionTypes.CHANGE_LYRIC_LIST,
   lyricList,
+})
+
+export const changePlayListAction = playList => ({
+  type: actionTypes.CHANGE_PLAY_LIST,
+  playList,
 })
 
 export const changeCurrentSongIndexAction = index => ({

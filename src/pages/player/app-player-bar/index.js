@@ -9,6 +9,7 @@ import {
   changeCurrentLyricIndexAction,
 } from '../store/actionCreators'
 
+import ANAppPlayPanel from '../app-play-panel'
 import { Slider, message } from 'antd'
 import { NavLink } from 'react-router-dom'
 import { Control, Operator, PlaybarWrapper, PlayInfo } from './style'
@@ -19,6 +20,8 @@ export default memo(function ANAppPlayerBar() {
   const [progress, setProgress] = useState(0)
   const [isChanging, setIsChangeing] = useState(false)
   const [isPlaying, setIsPlaying] = useState(false)
+
+  const [showPanel, setShowPanel] = useState(false)
 
   // redux hook
   const { currentSong, sequence, playList, lyricList, currentLyricIndex } = useSelector(
@@ -78,7 +81,7 @@ export default memo(function ANAppPlayerBar() {
         break
       }
     }
-    if (currentLyricIndex !== i - 1) {
+    if (currentLyricIndex !== i - 1 && isPlaying) {
       dispatch(changeCurrentLyricIndexAction(i - 1))
       const content = lyricList[i - 1] && lyricList[i - 1].content
       message.open({
@@ -155,7 +158,7 @@ export default memo(function ANAppPlayerBar() {
           <div className='info'>
             <div className='song'>
               <span className='song-name'>{currentSong.name}</span>
-              <a href='/todo' className='singer-name'>
+              <a href='/#' className='singer-name'>
                 {singerName}
               </a>
             </div>
@@ -183,13 +186,14 @@ export default memo(function ANAppPlayerBar() {
           <div className='right sprite_player'>
             <button className='sprite_player btn volume'></button>
             <button className='sprite_player btn loop' onClick={changeSequence}></button>
-            <button className='sprite_player btn playlist'>
+            <button className='sprite_player btn playlist' onClick={e => setShowPanel(!showPanel)}>
               <span className='text'>{playList.length}</span>
             </button>
           </div>
         </Operator>
       </div>
       <audio ref={audioRef} onTimeUpdate={e => timeUpdate(e)} onEnded={e => handleMusicEnded()} />
+      {showPanel && <ANAppPlayPanel />}
     </PlaybarWrapper>
   )
 })

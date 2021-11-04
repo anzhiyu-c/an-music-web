@@ -5,7 +5,7 @@ export default memo(function HeardRcmRight(props) {
   return (
     <HeaderWrapper>
       <h3 className='left'>{leftTitle}</h3>
-      {rightText ? <a href='/todo'>{rightText}</a> : null}
+      {rightText ? <a href='/#'>{rightText}</a> : null}
     </HeaderWrapper>
   )
 })

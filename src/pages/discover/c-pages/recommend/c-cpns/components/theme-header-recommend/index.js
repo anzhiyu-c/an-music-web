@@ -13,7 +13,7 @@ const ANThemeHeader = memo(function (props) {
           {keywords.map((item, index) => {
             return (
               <div className='item' key={item}>
-                <a href='todo'>
+                <a href='/#'>
                   {item}
                   <span className='divider'>|</span>
                 </a>

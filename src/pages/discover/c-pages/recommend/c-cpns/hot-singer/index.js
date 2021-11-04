@@ -25,7 +25,7 @@ export default memo(function ANHotSinger() {
       <HeardRcmRight leftTitle='热门歌手' rightText='查看全部&gt;' />
       {hotSinger.map(item => {
         return (
-          <a href='/todo' className='singer-item' key={item.id}>
+          <a href='/#' className='singer-item' key={item.id}>
             <img className='head-img' src={item.img1v1Url + '?param=62x62'} alt='' />
             <div className='info'>
               <h4 className='name'>{item.name}</h4>
@@ -34,7 +34,7 @@ export default memo(function ANHotSinger() {
           </a>
         )
       })}
-      <a href='/todo' className='footerBtn sprite_button'>
+      <a href='/#' className='footerBtn sprite_button'>
         <div className='tip sprite_button'>申请成为网易人</div>
       </a>
     </HotSingerWrapper>

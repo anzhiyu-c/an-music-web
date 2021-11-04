@@ -23,12 +23,12 @@ export default memo(function ANTopRanking(props) {
       <div className='header'>
         <div className='image'>
           <img src={getSizeImage(info.coverImgUrl)} alt={info.name} />
-          <a href='/todo' className='image_cover'>
+          <a href='/#' className='image_cover'>
             ranking
           </a>
         </div>
         <div className='info'>
-          <a href='/todo'>{info.name}</a>
+          <a href='/#'>{info.name}</a>
           <div>
             <button className='btn play sprite_02'></button>
             <button className='btn favor sprite_02'></button>
@@ -53,7 +53,7 @@ export default memo(function ANTopRanking(props) {
         })}
       </div>
       <div className='footer'>
-        <a href='/todo'>查看全部 &gt;</a>
+        <a href='/#'>查看全部 &gt;</a>
       </div>
     </TopRankingWrapper>
   )

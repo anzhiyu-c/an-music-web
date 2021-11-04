@@ -12,7 +12,7 @@ export default memo(function ANAppHeader() {
   const showSelectItem = (item, index) => {
     if (index < 3) {
       return (
-        <NavLink exact to={item.link}>
+        <NavLink to={item.link}>
           {item.title} <i className='sprite_01 icon'></i>
         </NavLink>
       )
@@ -40,7 +40,11 @@ export default memo(function ANAppHeader() {
         </HeaderLeft>
         <HeaderRight>
           <Input className='search' placeholder='爱就一个字' prefix={<SearchOutlined />} />
-          <div className='center'>创作者中心</div>
+          <div>
+            <a className='center' href='https://music.163.com/#/login?targetUrl=%2Fcreatorcenter'>
+              创作者中心
+            </a>
+          </div>
           <div>登录</div>
         </HeaderRight>
       </div>

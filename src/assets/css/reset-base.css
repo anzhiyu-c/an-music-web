@@ -142,6 +142,10 @@ button {
   background: url(../img/playbar_sprite.png) no-repeat 0 9999px;
 }
 
+.sprite_playlist {
+  background: url(../img/playlist_sprite.png) no-repeat 0 9999px;
+}
+
 .lyric-class .ant-message-notice-content {
   position: fixed;
   left: 50%;
@@ -150,4 +154,12 @@ button {
   background-color: rgba(0, 0, 0, 0.5);
   color: #fff;
   border-radius: 10px;
+}
+
+span:hover.link {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.ant-carousel .slick-dots-bottom {
+  z-index: 0;
 }

@@ -103,6 +103,17 @@ export const HeaderRight = styled.div`
     border-radius: 16px;
     margin: 0 16px;
     background-color: transparent;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: #ccc;
+    font-size: 12px;
+    justify-content: center;
+    &:hover {
+      color: #fff;
+      border: 1px solid #fff;
+      cursor: pointer;
+    }
   }
 
   .ant-input-affix-wrapper:not(.ant-input-affix-wrapper-disabled):hover {
