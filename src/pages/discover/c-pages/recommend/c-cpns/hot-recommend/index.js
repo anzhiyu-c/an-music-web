@@ -12,7 +12,7 @@ export default memo(function ANHotRecommend() {
   // state
 
   // redux hooks
-  const { hotRecommends } = useSelector(
+  const { hotRecommends = [] } = useSelector(
     state => ({
       hotRecommends: state.getIn(['recommend', 'hotRecommends']),
     }),

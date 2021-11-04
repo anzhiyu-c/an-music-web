@@ -11,7 +11,7 @@ import { TopAlbumWrapper } from './style'
 export default memo(function ANTopAlbum() {
   const [currentPage, setCurrentPage] = useState(1)
 
-  const { topAlbums, total } = useSelector(
+  const { topAlbums = [], total } = useSelector(
     state => ({
       topAlbums: state.getIn(['album', 'topAlbums']),
       total: state.getIn(['album', 'topTotal']),
@@ -35,7 +35,7 @@ export default memo(function ANTopAlbum() {
       <div className='album-list'>
         {topAlbums.map((item, index) => {
           return (
-            <ANAlbumCover size={'130px'} width={'153px'} bgp={'-845px'} key={item.id} info={item} />
+            <ANAlbumCover size={'130'} width={'153'} bgp={'-845px'} key={item.id} info={item} />
           )
         })}
       </div>
