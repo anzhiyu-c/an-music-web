@@ -1,17 +1,16 @@
+import React from 'react'
 import { Redirect } from 'react-router-dom'
 
-import ANDiscover from '../pages/discover'
-import ANMine from '../pages/mine'
-import ANFriend from '../pages/friend'
-import ANRecommend from '../pages/discover/c-pages/recommend'
-// const HYDiscover = React.lazy(() => import('@/pages/discover'))
-// const ANRecommend = React.lazy(_ => import("../pages/discover/c-pages/recommend"));
-// const HYRanking = React.lazy(_ => import('../pages/discover/c-pages/ranking'))
-// const HYSongs = React.lazy(_ => import('../pages/discover/c-pages/songs'))
-// const HYDjradio = React.lazy(_ => import('../pages/discover/c-pages/djradio'))
-// const HYArtist = React.lazy(_ => import('../pages/discover/c-pages/artist'))
-// const HYAlbum = React.lazy(_ => import('../pages/discover/c-pages/album'))
-import ANPlayer from '../pages/player'
+const ANDiscover = React.lazy(() => import('../pages/discover'))
+const ANRecommend = React.lazy(_ => import('../pages/discover/c-pages/recommend'))
+const ANMine = React.lazy(_ => import('../pages/mine'))
+const ANFriend = React.lazy(_ => import('../pages/friend'))
+const ANRanking = React.lazy(_ => import('../pages/discover/c-pages/ranking'))
+const ANSongs = React.lazy(_ => import('../pages/discover/c-pages/songs'))
+const ANDjradio = React.lazy(_ => import('../pages/discover/c-pages/djradio'))
+const ANArtist = React.lazy(_ => import('../pages/discover/c-pages/artist'))
+const ANAlbum = React.lazy(_ => import('../pages/discover/c-pages/album'))
+const ANPlayer = React.lazy(_ => import('../pages/player'))
 
 const routes = [
   {
@@ -32,27 +31,27 @@ const routes = [
         path: '/discover/recommend',
         component: ANRecommend,
       },
-      // {
-      //   path: '/discover/ranking',
-      //   component: HYRanking,
-      // },
-      // {
-      //   path: '/discover/songs',
-      //   component: HYSongs,
-      // },
-      // {
-      //   path: '/discover/djradio',
-      //   exact: true,
-      //   component: HYDjradio,
-      // },
-      // {
-      //   path: '/discover/artist',
-      //   component: HYArtist,
-      // },
-      // {
-      //   path: '/discover/album',
-      //   component: HYAlbum,
-      // },
+      {
+        path: '/discover/ranking',
+        component: ANRanking,
+      },
+      {
+        path: '/discover/songs',
+        component: ANSongs,
+      },
+      {
+        path: '/discover/djradio',
+        exact: true,
+        component: ANDjradio,
+      },
+      {
+        path: '/discover/artist',
+        component: ANArtist,
+      },
+      {
+        path: '/discover/album',
+        component: ANAlbum,
+      },
       {
         path: '/discover/player',
         component: ANPlayer,
