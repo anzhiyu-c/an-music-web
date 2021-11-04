@@ -29,6 +29,11 @@ export const changeSequenceAction = sequence => ({
   sequence,
 })
 
+export const changeCurrentLyricIndexAction = index => ({
+  type: actionTypes.CHANGE_CURRENT_LYRIC_INDEX,
+  index,
+})
+
 export const changeCurrrentIndexAndSongAction = tag => {
   return (dispatch, getState) => {
     const playList = getState().getIn(['player', 'playList'])
